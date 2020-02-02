@@ -181,16 +181,4 @@
   <data name="_sampleInputDialog.Content" xml:space="preserve">
     <value>Input dialogs offer an easy way to prompt the user for single piece of text. It's like an improved version of the old Visual Basic InputBox function. Input dialogs use a style similar to task dialogs when running on Windows Vista or later. They also support password masking.</value>
   </data>
-  <metadata name="_sampleCredentialDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>744, 17</value>
-  </metadata>
-  <metadata name="_sampleVistaFolderBrowserDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
-  <metadata name="_sampleVistaOpenFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>252, 56</value>
-  </metadata>
-  <metadata name="_sampleVistaSaveFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>458, 56</value>
-  </metadata>
 </root>

@@ -35,18 +35,6 @@ namespace Vip.Dialogs.Sample
                 case 3:
                     ShowInputDialog();
                     break;
-                case 4:
-                    ShowCredentialDialog();
-                    break;
-                case 5:
-                    ShowVistaFolderBrowserDialog();
-                    break;
-                case 6:
-                    ShowVistaOpenFileDialog();
-                    break;
-                case 7:
-                    ShowVistaSaveFileDialog();
-                    break;
             }
         }
 
@@ -87,60 +75,6 @@ namespace Vip.Dialogs.Sample
         {
             if (_sampleInputDialog.ShowDialog(this) == DialogResult.OK)
                 MessageBox.Show(this, "The text was: " + _sampleInputDialog.Input, "Sample input dialog");
-        }
-
-        private void ShowCredentialDialog()
-        {
-            if (_sampleCredentialDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                MessageBox.Show(this,
-                    string.Format("You entered the following information:\nUser name: {0}\nPassword: {1}",
-                        _sampleCredentialDialog.Credentials.UserName, _sampleCredentialDialog.Credentials.Password),
-                    "Credential dialog sample");
-                // Normally, you should verify if the credentials are correct before calling ConfirmCredentials.
-                // ConfirmCredentials will save the credentials if and only if the user checked the save checkbox.
-                _sampleCredentialDialog.ConfirmCredentials(true);
-            }
-        }
-
-        private void ShowVistaFolderBrowserDialog()
-        {
-            if (!VistaFolderBrowserDialog.IsVistaFolderDialogSupported)
-                MessageBox.Show(this,
-                    "Because you are not using Windows Vista or later, the regular folder browser dialog will be used. Please use Windows Vista to see the new dialog.",
-                    "Sample folder browser dialog");
-            if (_sampleVistaFolderBrowserDialog.ShowDialog(this) == DialogResult.OK)
-                MessageBox.Show(this, "The selected folder was: " + _sampleVistaFolderBrowserDialog.SelectedPath,
-                    "Sample folder browser dialog");
-        }
-
-        private void ShowVistaOpenFileDialog()
-        {
-            /* As of .Net 3.5 and .Net 2.0 SP1, the regular System.Windows.Forms.OpenFileDialog also supports using the new
-             * dialog style. The VistaOpenFileDialog class is still present as a sample on how to use the new IFileDialog API,
-             * and because the regular OpenFileDialog still reverts to the old dialog with some settings (e.g. ShowReadOnly set to true).
-             */
-            if (!VistaFileDialog.IsVistaFileDialogSupported)
-                MessageBox.Show(this,
-                    "Because you are not using Windows Vista or later, the regular open file dialog will be used. Please use Windows Vista to see the new dialog.",
-                    "Sample open file dialog");
-            if (_sampleVistaOpenFileDialog.ShowDialog(this) == DialogResult.OK)
-                MessageBox.Show(this, "The selected file was: " + _sampleVistaOpenFileDialog.FileName,
-                    "Sample open file dialog");
-        }
-
-        private void ShowVistaSaveFileDialog()
-        {
-            /* As of .Net 3.5 and .Net 2.0 SP1, the regular System.Windows.Forms.SaveFileDialog also supports using the new
-             * dialog style. The VistaSaveFileDialog class is still present as a sample on how to use the new IFileDialog API.
-             */
-            if (!VistaFileDialog.IsVistaFileDialogSupported)
-                MessageBox.Show(this,
-                    "Because you are not using Windows Vista or later, the regular save file dialog will be used. Please use Windows Vista to see the new dialog.",
-                    "Sample save file dialog");
-            if (_sampleVistaSaveFileDialog.ShowDialog(this) == DialogResult.OK)
-                MessageBox.Show(this, "The selected file was: " + _sampleVistaSaveFileDialog.FileName,
-                    "Sample save file dialog");
         }
 
         private void _sampleTaskDialog_HyperlinkClicked(object sender, HyperlinkClickedEventArgs e)

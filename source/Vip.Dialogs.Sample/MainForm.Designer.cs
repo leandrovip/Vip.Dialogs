@@ -43,10 +43,6 @@
             this._cancel2TaskDialogButton = new Vip.Dialogs.TaskDialogButton(this.components);
             this._sampleProgressDialog = new Vip.Dialogs.ProgressDialog(this.components);
             this._sampleInputDialog = new Vip.Dialogs.InputDialog(this.components);
-            this._sampleCredentialDialog = new Vip.Dialogs.CredentialDialog(this.components);
-            this._sampleVistaFolderBrowserDialog = new Vip.Dialogs.VistaFolderBrowserDialog();
-            this._sampleVistaOpenFileDialog = new Vip.Dialogs.VistaOpenFileDialog();
-            this._sampleVistaSaveFileDialog = new Vip.Dialogs.VistaSaveFileDialog();
             this.SuspendLayout();
             // 
             // _sampleTaskDialog
@@ -81,9 +77,10 @@
             // _dialogLabel
             // 
             this._dialogLabel.AutoSize = true;
-            this._dialogLabel.Location = new System.Drawing.Point(12, 15);
+            this._dialogLabel.Location = new System.Drawing.Point(16, 18);
+            this._dialogLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this._dialogLabel.Name = "_dialogLabel";
-            this._dialogLabel.Size = new System.Drawing.Size(40, 13);
+            this._dialogLabel.Size = new System.Drawing.Size(52, 17);
             this._dialogLabel.TabIndex = 0;
             this._dialogLabel.Text = "&Dialog:";
             // 
@@ -97,22 +94,20 @@
             "Task Dialog",
             "Task Dialog with command links",
             "Progress Dialog",
-            "Input Dialog",
-            "Credential Dialog",
-            "Vista-style Folder Browser Dialog",
-            "Vista-style Open File Dialog",
-            "Vista-style Save File Dialog"});
-            this._dialogComboBox.Location = new System.Drawing.Point(58, 12);
+            "Input Dialog"});
+            this._dialogComboBox.Location = new System.Drawing.Point(77, 15);
+            this._dialogComboBox.Margin = new System.Windows.Forms.Padding(4);
             this._dialogComboBox.Name = "_dialogComboBox";
-            this._dialogComboBox.Size = new System.Drawing.Size(302, 21);
+            this._dialogComboBox.Size = new System.Drawing.Size(401, 24);
             this._dialogComboBox.TabIndex = 1;
             // 
             // _showDialogButton
             // 
             this._showDialogButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this._showDialogButton.Location = new System.Drawing.Point(366, 10);
+            this._showDialogButton.Location = new System.Drawing.Point(488, 12);
+            this._showDialogButton.Margin = new System.Windows.Forms.Padding(4);
             this._showDialogButton.Name = "_showDialogButton";
-            this._showDialogButton.Size = new System.Drawing.Size(75, 23);
+            this._showDialogButton.Size = new System.Drawing.Size(100, 28);
             this._showDialogButton.TabIndex = 2;
             this._showDialogButton.Text = "&Show dialog";
             this._showDialogButton.UseVisualStyleBackColor = true;
@@ -159,41 +154,18 @@
             this._sampleInputDialog.MainInstruction = "Please enter some text.";
             this._sampleInputDialog.WindowTitle = "Sample input dialog";
             // 
-            // _sampleCredentialDialog
-            // 
-            this._sampleCredentialDialog.Content = "Since this is a sample the credentials won\'t be used for anything, so you can ent" +
-    "er anything you like.";
-            this._sampleCredentialDialog.MainInstruction = "Please enter your username and password.";
-            this._sampleCredentialDialog.ShowSaveCheckBox = true;
-            this._sampleCredentialDialog.ShowUIForSavedCredentials = true;
-            this._sampleCredentialDialog.Target = "Ookii_DialogsSample_www.example.com";
-            this._sampleCredentialDialog.WindowTitle = "Credential dialog sample";
-            // 
-            // _sampleVistaFolderBrowserDialog
-            // 
-            this._sampleVistaFolderBrowserDialog.Description = "Please select a folder.";
-            this._sampleVistaFolderBrowserDialog.UseDescriptionForTitle = true;
-            // 
-            // _sampleVistaOpenFileDialog
-            // 
-            this._sampleVistaOpenFileDialog.Filter = "All files (*.*)|*.*";
-            // 
-            // _sampleVistaSaveFileDialog
-            // 
-            this._sampleVistaSaveFileDialog.DefaultExt = "txt";
-            this._sampleVistaSaveFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
-            // 
             // MainForm
             // 
             this.AcceptButton = this._showDialogButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 55);
+            this.ClientSize = new System.Drawing.Size(604, 68);
             this.Controls.Add(this._showDialogButton);
             this.Controls.Add(this._dialogComboBox);
             this.Controls.Add(this._dialogLabel);
-            this.MaximumSize = new System.Drawing.Size(1000000, 300);
-            this.MinimumSize = new System.Drawing.Size(361, 20);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(1333327, 358);
+            this.MinimumSize = new System.Drawing.Size(475, 47);
             this.Name = "MainForm";
             this.Text = "Vip.Dialogs sample";
             this.UseSystemFont = true;
@@ -218,10 +190,6 @@
         private TaskDialogButton _cancel2TaskDialogButton;
         private ProgressDialog _sampleProgressDialog;
         private InputDialog _sampleInputDialog;
-        private CredentialDialog _sampleCredentialDialog;
-        private VistaFolderBrowserDialog _sampleVistaFolderBrowserDialog;
-        private VistaOpenFileDialog _sampleVistaOpenFileDialog;
-        private VistaSaveFileDialog _sampleVistaSaveFileDialog;
     }
 }
 

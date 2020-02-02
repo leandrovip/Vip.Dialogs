@@ -56,8 +56,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\Vip.Dialogs.xml</DocumentationFile>
-    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
     <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -74,15 +75,7 @@
     <Compile Include="AnimationResource.cs" />
     <Compile Include="ButtonType.cs" />
     <Compile Include="ComCtlv6ActivationContext.cs" />
-    <Compile Include="CredentialDialog.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CredentialDialog.designer.cs">
-      <DependentUpon>CredentialDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CredentialException.cs" />
     <Compile Include="DialogHelper.cs" />
-    <Compile Include="DownlevelTextMode.cs" />
     <Compile Include="ExpandButtonClickedEventArgs.cs" />
     <Compile Include="ExtendedForm.cs">
       <SubType>Form</SubType>
@@ -152,22 +145,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="TimerEventArgs.cs" />
-    <Compile Include="VistaFileDialog.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="VistaFileDialogEvents.cs" />
-    <Compile Include="VistaFolderBrowserDialog.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="VistaOpenFileDialog.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="VistaSaveFileDialog.cs">
-      <SubType>Component</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="ProgressDialog.bmp" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ProgressDialog.resx">
@@ -177,9 +154,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="TaskDialog.bmp" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ExtendedForm.resx">
@@ -192,25 +166,13 @@
       <DependentUpon>InputDialogForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="VistaFolderBrowserDialog.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="InputDialog.bmp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="package.nuspec" />
     <None Include="vip.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CredentialDialog.bmp" />
-  </ItemGroup>
-  <ItemGroup>
     <CodeAnalysisDictionary Include="CustomDictionary.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="VistaOpenFileDialog.bmp" />
-    <Content Include="VistaSaveFileDialog.bmp" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

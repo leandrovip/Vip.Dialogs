@@ -1,31 +1,18 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <!--*-->
     <id>Vip.Dialogs</id>
-    <!--*-->
-    <version>1.0.0.1</version>
+    <version>1.0.0.2</version>
     <title>Vip.Dialogs</title>
-    <!--*-->
     <authors>Vip Soluções</authors>
     <owners>Vip Soluções</owners>
-    <!--
-    <licenseUrl></licenseUrl>
-    <projectUrl></projectUrl>
-    <iconUrl></iconUrl>
--->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--*-->
     <description>Package for dialogs of softwares Vip Soluções</description>
-    <!--*-->
-    <releaseNotes>Vip.Dialogs</releaseNotes>
+    <releaseNotes>Remove files bmp and updates</releaseNotes>
     <copyright>Copyright © Vip Soluções 2018</copyright>
-    <tags>
-    </tags>
-    <dependencies>
-      <!--
-      <dependency id="SampleDependency" version="1.0" />
--->
-    </dependencies>
+    <tags>viperp vip dialogs messagebox</tags>
   </metadata>
+   <files>
+        <file src="..\source\Vip.Dialogs\bin\Release\Vip.Dialogs.dll" target="lib\net462\Vip.Dialogs.dll"/>
+   </files>
 </package>
